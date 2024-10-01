@@ -6,38 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Valor"
+    <EditText
+        android:id="@+id/edText"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:hint="Valor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/edMin"
+    <TextView
+        android:id="@+id/tvPeso"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:ems="10"
-        android:hint="Menor Numero"
+        android:hint="Pesos"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintBottom_toTopOf="@+id/edText"
+        app:layout_constraintEnd_toEndOf="@+id/edText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/edMax"
+    <TextView
+        android:id="@+id/tvLibra"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:ems="10"
-        android:hint="Maior Numero"
+        android:hint="Libra"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintBottom_toTopOf="@+id/edText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/edText"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -48,5 +48,33 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/edText"
+        app:layout_constraintVertical_bias="0" />
+
+    <TextView
+        android:id="@+id/tvEuro"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="Euro"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/tvPeso"
+        app:layout_constraintEnd_toEndOf="@+id/edText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDolar"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="Dólar"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/tvLibra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/edText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

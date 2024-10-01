@@ -8,10 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import java.util.Random;
-
 public class MainActivity extends AppCompatActivity {
-
+    double valor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,13 +18,19 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                TextView textView = findViewById(R.id.textView);
-                EditText edMin =findViewById(R.id.edMin);
-                EditText edMax =findViewById(R.id.edMax);
-                Random random= new Random();
-                int nmin = (Integer.parseInt(edMin.getText().toString()));
-                int nmax = (Integer.parseInt(edMax.getText().toString()));
-                textView.setText(Integer.toString(random.nextInt(nmax-nmin+1)+nmin));
+                EditText edText = findViewById(R.id.edText);
+                TextView tvPeso = findViewById(R.id.tvPeso);
+                TextView tvEuro = findViewById(R.id.tvEuro);
+                TextView tvLibra = findViewById(R.id.tvLibra);
+                TextView tvDolar = findViewById(R.id.tvDolar);
+                valor = Double.parseDouble(edText.getText().toString()) * 0.18;
+                tvDolar.setText(String.format("%.2f Dólares", valor));
+                valor = Double.parseDouble(edText.getText().toString()) * 180;
+                tvPeso.setText(String.format("%.2f Pesos", valor));
+                valor = Double.parseDouble(edText.getText().toString()) * 0.16;
+                tvEuro.setText(String.format("%.2f Euros", valor));
+                valor = Double.parseDouble(edText.getText().toString()) * 0.14;
+                tvLibra.setText(String.format("%.2f Libras", valor));
             }
         });
     }
